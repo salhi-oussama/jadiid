@@ -1,0 +1,252 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+body{
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+}
+.logo{
+width: 100px;
+height: auto;
+}
+.container{
+    height: 100vh;
+    width: 100%;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+    padding: 20px 0;
+
+}
+.ul-1 .li-1{
+    display: inline-block;
+    list-style: none;
+    position: relative;
+}
+.ul-1 .li-1 a{
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    padding: 10px;
+
+}
+
+.ul-1 .li-1 a span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    border-bottom: 2px solid #0ef;
+    border-radius: 15px;
+    transform: scale(0) translateY(50px);
+    transition: .5s;
+}
+.ul-1 .li-1 a:hover span{
+    transform: scale(1) translateY(0);
+    opacity: 1;
+}
+a:hover{
+    color: #0ef;
+    transition: .5s;
+    border: #fff;
+}
+
+
+h3{
+    text-align: center;
+    font-size: 30px;
+    margin: 0;
+    padding-top: 10px;
+}
+.gallery{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0;
+
+}
+.content{
+    width: 20%;
+    margin: 16px;
+    box-sizing: border-box;
+    float: left;
+    text-align: center;
+    border-radius: 20px;
+    cursor: pointer;
+    padding-top: 10px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25),
+    0 10px 10px rgba(0,0,0,0.22);
+    transition: .4s;
+    background: #f2f2f2;
+    z-index: -1;
+
+}
+.content:hover{
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16),
+    0 3px 6px rgba(0,0,0,0.23);
+    transform: translate(0px, -8px);
+}
+img{
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+}
+p{
+    text-align: center;
+    color: #b2bec3;
+    padding-top: 0 8px;
+}
+h6{
+    font-size: 26px;
+    text-align: center;
+    color: #222f3e;
+    margin: 0;
+
+}
+.ul-2{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+.ul-2 li{
+    padding: 4px;
+}
+.fa{
+    font-size: 26px;
+    transition: .4s;
+    width: 20px;
+}
+.checked{
+    color: #ff9f43;
+}
+.fa:hover{
+    transform: scale(1.3);
+    transition: .6s;
+}
+button{
+    text-align: center;
+    font-size: 24px;
+    color: #fff;
+    width: 100%;
+    padding: 15px;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    margin-top: 5px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+.buy-1{
+    background: #2183a2;
+}
+.buy-2{
+    background: #3b3e6e;
+}
+.buy-3{
+    background: #0b0b0b;
+}
+.buy-4{
+    background: #ff9f43;
+}
+@media (max-width: 1176px) {
+    .content {
+        width: 42%;
+    }
+}
+
+@media (max-width: 750px) {
+    .content {
+        width: 42%;
+    }
+}
+
+@media (max-width: 500px) {
+    .content {
+        width: 42%;
+    }
+}
+@media (max-width: 500px) {
+    header ul li a {
+        margin: 0 5px;
+        font-size: 14px;
+    }
+
+    .gallery {
+        margin: 20px 0;
+    }
+
+    .content img {
+        width: 150px;
+        height: auto;
+    }
+
+    h3, h6 {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 12px;
+    }
+
+    button {
+        font-size: 18px;
+    }
+}
+/* Menu initially hidden on phones */
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: fit-content;
+    height: 100vh;
+    transform: translateX(-100%); /* Hide off-screen */
+    transition: transform 0.3s ease;
+}
+
+/* When the menu is open */
+.menu.open {
+    transform: translateX(0); /* Slide in */
+}
+
+/* Toggle button styles */
+.menu-toggle {
+    display: none;
+    width: fit-content;
+    font-size: 30px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    left: 400px;
+}
+
+/* Show the menu and toggle button only on phone screens */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* Show button on small screens */
+    }
+
+    .menu {
+        transform: translateX(-100%); /* Menu hidden initially */
+    }
+    .ul-1{
+        display: none;
+    }
+}
